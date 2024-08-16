@@ -1,0 +1,393 @@
+Question
+The StackADT's pop operation:
+You see the expression n = 100000 in some code that successfully compiles. What type can n not be?
+"public BallPanel extends javax.swing.JPanel {
+     private Ball[] _balls;
+     public BallPanel(){
+        _balls = new Ball[20];
+        for (int i=0;i<10;i++)
+           _balls[i] = new Ball();
+     }
+     ...
+  }
+
+ 
+After I have instantiated a BallPanel using the above code, which of the following Java statements would work (if executed in some method of BallPanel)?  Assume Ball has a public getColor() method."
+"Suppose s is an instance of a stack that can store Strings, and I execute the following statements?
+1. s.push(""Finland"");
+2. s.push(""is"");
+3. s.push(""my"");
+4. String w = s.peek();
+5. String x = s.pop();
+6. s.push(""home"");
+7. String y = s.pop();
+8. String z = s.pop();
+
+ 
+What is the value of z after executing these statements in order?"
+Suppose you are trying to choose between an array and a linked list to store the data in your Java program. Which data structure can change size as needed while the program is running?
+"What will be outputted?
+class A{
+      int firstMethod(int input){
+           return input+2;
+     }
+}
+class B extends A{
+}
+class C extends B{
+     int firstMethod(int input){
+          return input-2;
+     }
+}
+public class test {
+     public static void main(String[] arg){
+          B myObject = new B();
+          System.out.println(myObject.firstMethod(2));
+     }
+}"
+"Consider the following Java implementation of a Stack:
+public class Stack<E> extends LinkedList<E>{
+  private int size=0;
+  public int size(){
+    return size;
+  }
+  public void push(E e){
+    add(e);
+    size+=1;
+  }
+  public E pop() {
+    size-=1;
+    return removeLast();
+  }
+}
+
+ 
+What does the following code output?
+Stack<Integer> q=new Stack<Integer>();
+q.push(10);
+q.push(20);
+q.clear();  // clear() is inherited from LinkedList
+
+System.out.println(q.size());"
+"What wil the following code print, assuming that N is a positive integer?
+int count=0;
+for (int i=0; i<N; i++) {
+   if (i % 2 == 0) {
+      count++;
+   }
+}
+System.out.println(count);"
+"Read the following method skeleton and choose the best expression to fill in the blank on line 5 so that the method will behave correctly:
+/**
+* Takes a string reference and counts the number of times
+* the character 'A' or 'a' appears in the string object.
+* @param aString   String reference to object containing chars.
+* @precondition    aString is not null (you may assume this is true).
+* @return          The number of times 'A' or 'a' appears in the string.
+*/
+public static int countAs(String aString)  // line 1
+{
+    int counter = __________;              // line 2
+    int totalA = 0;                        // line 3
+    while (counter < __________)           // line 4
+    {
+        if ( __________.equals(""A"") )      // line 5
+        {
+            totalA = totalA + __________;  // line 6
+        }
+        counter++;                         // line 7
+    }
+    return __________;                     // line 8
+}"
+"You've got an algorithm that is O(log N). On the first run, you feed it a collection of size M. On the second run, you feed it a collection of size M / 2. Assuming each run has worst-case performance, how many fewer operations does the second run take?"
+Two algorithms accomplish the same task on a collection of N items. Algorithm A performs (N/2)3 operations. Algorithm B performs N2 operations. Under what conditions does algorithm A offer strictly better performance?
+"What does the following Java code print?
+int outer=0;
+for (int i=0; i<12; i++) {
+   if (i % 2 == 0) {
+      outer++;
+   }
+}
+System.out.println(outer);"
+What abstract data type is best suited to help us implement a breadth-first search?
+Locating a new node's insertion point in a binary search tree stops when
+"If you did not have a base case in a recursive function in C, and were working on a modern Unix-based system, what would most likely happen?"
+"William has the hash function: hash function h(k) = (sum of the digits) % 10. He wants to hash 33, 60, 24, 42 and 6.
+Which collision resolution method should he chose in his implementation, if he wants to ensure that adding 80 happens in O(1) time?"
+"What would the following line of code do with a form named frmMain?
+frmMain.Caption = txtName.Text"
+Which of the following abstract datatypes would be the best choice for part of the implementation of the back button on a Web browser?
+"Given the following Java class declaration:
+public class T2int
+{
+    private int i;
+
+    public T2int()
+    {
+        i = 0;
+    }
+
+    public T2int(int i)
+    {
+        this.i = i;
+    }
+
+    public int get()
+    {
+        return i;
+    }
+}
+
+ 
+The following method, called rangeSum(), is intended to take three parameters: a List of T2int objects, plus the low and high end of a range within the list. The method computes the sum of the values in the List that are within the ""range"" (but not including the range end values). Choose the best choice to fill in the blank on Line 8 so that the method will work as intended:
+public int rangeSum(List<T2int> list, int low, int high)
+{
+    int num = 0;                                 // Line 1
+    int sum = 0;                                 // Line 2
+
+    for (int idx = 0; idx < list.size(); idx++)  // Line 3
+    {
+        int ival = list.get(idx).get();          // Line 4
+        if (__________)                          // Line 5
+        {
+            num++;                               // Line 6
+            sum = __________;                    // Line 7
+        }
+    }
+    return __________;                           // Line 8
+}"
+"After the following syntactically correct code is executed, where will Karel be standing and which direction will the robot be facing? How many beepers will karel be carrying? There are beepers at (2,2), (2,3), (2,4), (2,5), (2,6). (Note: a beeper at (2,5) means there is a beeper at the intersection of 2nd street and 5th avenue.)
+def task ():  karel = Robot (2,2,East,0);  while (karel.nextToABeeper()):    karel.turnLeft()    karel.move()    for i in range (2):      karel.turnLeft()
+    karel.move()    karel.turnLeft()    if (karel.nextToABeeper()):      karel.pickBeeper()      karel.move()
+  karel.move()  karel.turnOff()"
+"The following method, called maxRow(), is intended to take one parameter: a List where the elements are Lists of Integer objects. You can think of this parameter as a matrix--a list of rows, where each row is a list of ""cells"" (plain integers). The method sums up the integers in each row (each inner list), and returns the index (row number) of the row with the largest row sum. Choose the best choice to fill in the blank on Line 5 so that this method works as intended:
+public static int maxRow(List<List<Integer>> matrix)
+{
+    int maxVec = -1;                                // Line 1
+    int maxSum = Integer.MIN_VALUE;                 // Line 2
+
+    for (int row = 0; row < __________; row++)      // Line 3
+    {
+        int sum = 0;                                // Line 4
+        for (int col = 0; col < __________; col++)  // Line 5
+        {
+            sum = sum + __________;                 // Line 6
+        }
+        if (___________)                            // Line 7
+        {
+            maxSum = __________;                    // Line 8
+            maxVec = __________;                    // Line 9
+        }
+    }
+    return maxVec;                                  // Line 10
+}"
+"You know exactly how much data you need to store, but there's not much of it. You do need to be able to search the collection quickly. What is the simplest data structure that best suits for your needs?"
+Which of the following recommendations for testing software is good advice?
+"What will be printed by this code?
+      public static void main(String [] args){
+            int number = 6;
+            int secondNumber = changeNumber (number);
+            System.out.print(number + "" "" + secondNumber);
+      }
+      public static int changeNumber(int number){
+            number = 12;
+            return number;
+      }"
+You need to sort an array but have no extra memory to spare. Which algorithm do you avoid?
+"What does the following Java code produce?
+int result=1;
+for (int i=1; i<=N; i++) {
+   result *= 2;
+}
+System.out.println(result);"
+"How many objects are created in the following declaration?
+String name;"
+Suppose you have a Java array of ints. What is the worst-case time complexity of retrieving a value from a given location in the array?
+"Suppose q is an instance of a queue that can store Strings, and I execute the following statements starting with q empty:
+1. q.enqueue(""Sweden"");
+2. q.enqueue(""is"");
+3. q.enqueue(""my"");
+4. String w = q.dequeue();
+5. String x = q.peek();
+6. q.enqueue(""neighbor"");
+7. String y = q.dequeue();
+8. String z = q.dequeue();
+
+ 
+What is the value of z after executing these expressions in order?"
+You are writing a depth-first search on a platform that doesn't support recursion. What data structure can help you complete your task?
+"Suppose you've got a generic class:
+class Rosters<T> {
+  ...
+}
+
+ 
+You create a Rosters instance:
+Rosters<ArrayList<String>> rosters; 
+What is the erasure type of Rosters?"
+"Read the following method skeleton and choose the best expression to fill in the blank on line 6 so that the method will behave correctly:
+/**
+* Takes a string reference and counts the number of times
+* the character 'A' or 'a' appears in the string object.
+* @param aString   String reference to object containing chars.
+* @precondition    aString is not null (you may assume this is true).
+* @return          The number of times 'A' or 'a' appears in the string.
+*/
+public static int countAs(String aString)  // line 1
+{
+    int counter = __________;              // line 2
+    int totalA = 0;                        // line 3
+    while (counter < __________)           // line 4
+    {
+        if ( __________.equals(""A"") )      // line 5
+        {
+            totalA = totalA + __________;  // line 6
+        }
+        counter++;                         // line 7
+    }
+    return __________;                     // line 8
+}"
+"The Fibonacci sequence is 0, 1, 1, 2, 3, 5, 8, 13 ... Any term (value) of the sequence that follows the first two terms (0 and 1) is equal to the sum of the preceding two terms. Consider the following incomplete method to compute any term of the Fibonacci sequence:
+public static int fibonacci(int term)
+{
+    int fib1 = 0;          // Line 1
+    int fib2 = 1;          // Line 2
+    int fibn = 0;          // Line 3
+
+    if (term == 1)         // Line 4
+    {
+        return fib1;       // Line 5
+    }
+    if (term == 2)         // Line 6
+    {
+        return fib2;       // Line 7
+    }
+
+    for (__________)       // Line 8: loop to the nth term
+    {
+        fibn = __________; // Line 9: compute the next term
+        fib1 = __________; // Line 10: reset the second preceding term
+        fib2 = __________; // Line 11: reset the immediate preceding term
+    }
+    return fibn;           // Line 12: return the computed term
+}
+
+
+Choose the best answer to fill in the blank on line 8."
+"After the assignments x = 27 and y = 12, what is returned by not x <= y < x + y ?"
+"The following method isSorted should return true if the array x is sorted in ascending order. Otherwise, the method should return false:
+public boolean isSorted (int[] x){
+   //missing code goes here
+}
+
+Which of the following is the missing code from the method isSorted?"
+"Consider the following two simple Java classes:
+public class Base {
+  protected int x;
+}
+
+public class Derived extends Base {
+  protected int y;
+}
+
+ 
+Which of the following is/are legal?"
+C++ uses
+Which of the following assertions about the effect of int(my_var) is correct?
+"What will be outputted?
+String input = ""Home               is                             where the heart is"";
+Scanner sc_input = new Scanner(input).useDelimiter(""\\s*is\\s*"");
+while (sc_input.hasNext())
+            System.out.println(sc_input.next());"
+"Assume that an object of the following class has just been created:
+public class Unknown
+{
+    private int x;
+
+    public Unknown()
+    {
+        x = 17;
+        method1();
+        method2(5);
+        method3();
+        System.out.println(x);      // Line D
+    }
+
+    public void method1()
+    {
+        --x;
+        int x = this.x;
+        x++;
+        System.out.println(this.x); // Line A
+    }
+
+    public void method2(int x)
+    {
+        x++;
+        System.out.println(x);      // Line B
+    }
+
+    public void method3()
+    {
+        --x;
+        int x = 2;
+        x++;
+        System.out.println(x);      // Line C
+    }
+}
+
+ 
+What output is produced by Line A when an instance of this class is created?"
+"Consider the following class for a Ninja:
+public class Ninja {
+  private int honor;
+  public Ninja(int h) {
+    this.honor=h;
+  }
+}
+
+ 
+Suppose we instantiate two Ninjas like this:
+Ninja n1=new Ninja(50);
+Ninja n2=new Ninja(50);
+
+ 
+Is the following statement True, False, or It Depends (i.e. depends on a factor external to this question)
+n1.equals(n2)"
+"Suppose you are writing software for a helpdesk. Each request is entered into the system as it arrives. 
+Which of the following abstract datatypes would be the best choice to ensure that the requests are handled in exactly the same order in which they arrive?"
+"Consider the following class definition:
+public class Mystery {
+private ArrayList<Stuff> myStuff;
+public Mystery() {   myStuff = new ArrayList<Stuff> ();}
+public Stuff foo1 (int id) {   int i = 42;
+   ... code deleted...
+   return myStuff[i];}
+public void foo2 (int id) {   int i = -2;
+   ... code deleted...}
+public Stuff foo3 (int id) {   int i = 0;   ... code deleted...   return myStuff[i];}
+} // End of class Mystery
+True or False: ""i"" should be upgraded to an instance variable."
+"The following code for a method ""minVal"" contains a logic error on a single line in the method body, on one of the four lines indicated by comments:public static int minVal(int[] y, int first, int last) {
+/* This method returns the value of the minimum element in the
+ * subsection of the array ""y"", starting at position
+ * ""first"" and ending at position ""last"".
+ */
+ 
+  int bestSoFar = y[first];          // line 1
+ 
+  for (int i=first+1; i<=last; i++)
+  {
+    if ( y[i] < y[bestSoFar] )       // line 2
+
+       bestSoFar = y[i];             // line 3  } // for  return bestSoFar;                  // line 4} // method minValWhich one of the four lines indicated by the comments contains the logic error?"
+Which problem is not P (assuming P!=NP)?
+What effect does the statement Option Explicit in the declaration section have on a Visual Basic module?
+"Suppose you try to perform a binary search on the unsorted array {1, 4, 3, 7, 15, 9, 24}. Which element will not be found when you try searching for it?"
+Which of the following is true of a Java interface?
+Inserting a node into a heap is
+"Consider the following:
+public void foo (int x) {
+...
+}
+What is x?"
